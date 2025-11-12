@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="Login.css">
+  <link rel="stylesheet" href="Login.js">
+</head>
+
+
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 class="brand-title">Tourism</h1>
+      <p class="brand-subtitle">Sign in to continue</p>
+
+      <form class="auth-form" id="loginForm">
+        <!-- Username -->
+        <div class="form-group">
+          <label for="email" class="form-label">Username:</label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password" class="form-label">Password:</label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              class="form-input"
+              placeholder="Enter your password"
+              required
+            />
+            <button type="button" id="togglePassword" class="password-toggle">Show</button>
+          </div>
+        </div>
+
+        <!-- Forgot Password -->
+        <p class="forgot-link"><a href="#">Forgot password?</a></p>
+
+        <!-- Submit -->
+        <button type="submit" class="login-button">Login</button>
+
+        <!-- Register -->
+        <p class="signup-note">
+          Don’t have an account? <a href="#" class="signup-link">Register</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  
+</body>
