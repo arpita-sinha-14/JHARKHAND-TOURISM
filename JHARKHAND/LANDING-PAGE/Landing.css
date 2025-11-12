@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* --------- PHONE FRAME LOOK --------- */
+.mobile-frame {
+  width: 390px;          /* iPhone 12 width */
+  height: 844px;         /* iPhone 12 height */
+  background-color: #000;
+  border-radius: 40px;
+  overflow-y: auto;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  border: 12px solid #222;
+  position: relative;
+}
+
+.mobile-frame::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional top notch */
+.mobile-frame::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 20px;
+  background: #222;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+/* Optional bottom home bar */
+.mobile-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 5px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* --------- MOBILE CONTENT --------- */
+.mobile-wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+  border-radius: 28px;
+}
+
+header {
+  background: url('bg.jpg') center/cover no-repeat;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 90vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav .logo {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.book-btn {
+  background: #fff;
+  color: #000;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.hero {
+  text-align: center;
+  margin: auto 0 50px 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(to top, #fff, #ddd);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  padding: 18px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+section {
+  padding: 30px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  height: 2px;
+  width: 60px;
+  background: #f0c674;
+  display: block;
+  margin: 8px auto 0;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.Places {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.included {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.included-item {
+  padding: 18px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.25);
+  text-align: center;
+}
+
+.contact {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  outline: none;
+}
+
+.contact button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0 20px 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}

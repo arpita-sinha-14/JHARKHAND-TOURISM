@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Jharkhand</title>
+  <link rel="stylesheet" href="Explore.css" />
+</head>
+<body>
+  <div class="mobile-container">
+
+    
+
+    <!-- Top Navbar -->
+    <header class="topbar">
+      <div class="menu" id="menuBtn">☰</div>
+      <div class="search-box">
+        <input type="text" placeholder="Search here..." />
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="profile">👤</div>
+    </header>
+
+    
+    <div class="carousel" mask>
+	<article>
+		<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="">
+		<h2>The Cross</h2>
+		<div>
+			<p>The Cross is a central symbol of Easter, representing the crucifixion of Jesus Christ and his sacrifice for humanity. It serves as a reminder of suffering, love, and redemption, and is often displayed during Holy Week and Easter Sunday to honor the foundation of Christian faith.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+	<article>
+		<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="easter eggs">
+		<h2>Easter Eggs</h2>
+		<div>
+			<p>Easter eggs are a colorful symbol of new life and rebirth, often decorated and hidden for festive hunts. The tradition comes from ancient spring rituals and was later adopted into Easter celebrations to represent the resurrection.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+	<article>
+		<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="hot cross buns">
+		<h2>Hot Cross Buns</h2>
+		<div>
+			<p>Hot cross buns are sweet, spiced buns marked with a cross on top, traditionally eaten on Good Friday. They originated in England and symbolize the crucifixion, with the cross representing Jesus and the spices recalling burial traditions.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+	<article>
+		<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="easter chick">
+		<h2>Easter Chick</h2>
+		<div>
+			<p>Easter chicks are a cheerful symbol of new life and beginnings, often seen alongside eggs in spring decorations. They represent birth and renewal, tying into the themes of Easter and the arrival of spring.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+	<article>
+		<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="easter bunny">
+		<h2>Easter Bunnies</h2>
+		<div>
+			<p>Easter bunnies are a popular symbol of spring and new life, often seen delivering colorful eggs to children.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+	<article>
+		<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="crown of thorms">
+		<h2>Crown of Thorns</h2>
+		<div>
+			<p>The Crown of Thorns symbolizes the suffering of Jesus before his crucifixion. It represents the pain he endured for humanity’s salvation and is a reminder of his sacrifice during Easter.</p>
+
+			<a href="#">Read more</a>
+		</div>
+	</article>
+
+</div>
+
+    <!-- Vertical List Section -->
+    <section class="list-section">
+      <h2>Popular Spots</h2>
+      <div class="list-item"><strong>Patratu Valley</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius quibusdam ut beatae labore ipsa 
+        eaque cupiditate possimus nesciunt vero?
+      </div>
+      <div class="list-item"><strong>Netarhat</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius quibusdam ut beatae labore ipsa 
+        eaque cupiditate possimus nesciunt vero?
+      </div>
+      <div class="list-item"><strong>Hundru Falls</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius quibusdam ut beatae labore ipsa 
+        eaque cupiditate possimus nesciunt vero?
+      </div>
+      <div class="list-item"><strong>Betla National Park</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius quibusdam ut beatae labore ipsa 
+        eaque cupiditate possimus nesciunt vero?
+      </div>
+      <div class="list-item"><strong>Jagannath Temple, Ranchi</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius quibusdam ut beatae labore ipsa 
+        eaque cupiditate possimus nesciunt vero?
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.add('open');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+
+    // Close sidebar when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === sidebar) sidebar.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
