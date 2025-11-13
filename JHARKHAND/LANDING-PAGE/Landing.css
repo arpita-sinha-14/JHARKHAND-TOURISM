@@ -68,7 +68,7 @@ body {
 }
 
 header {
-  background: url('bg.jpg') center/cover no-repeat;
+  background: url('image.png') center/cover no-repeat;
   padding: 15px;
   display: flex;
   flex-direction: column;

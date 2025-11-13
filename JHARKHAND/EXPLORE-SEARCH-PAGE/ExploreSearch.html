@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Blog Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    .menu-icon, .profile-icon {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    /* Side Menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -70%;
+      width: 65%;
+      height: 100%;
+      background: #fff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: 0.4s ease;
+      z-index: 200;
+    }
+
+    .side-menu.active {
+      left: 0;
+    }
+
+    .side-menu h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #007bff;
+    }
+
+    .side-menu ul {
+      list-style: none;
+    }
+
+    .side-menu ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .side-menu ul li:hover {
+      color: #007bff;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      padding: 16px;
+      scroll-behavior: smooth;
+    }
+
+    .gallery img {
+      width: 260px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    .section {
+      background: #fff;
+      margin: 12px 16px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      transition: 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .section h3 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .read-btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .read-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 210px;
+        height: 130px;
+      }
+
+      .section {
+        padding: 12px;
+      }
+
+      .section h3 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="title">Gallery</div>
+    <div class="profile-icon">👤</div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <h2>Menu</h2>
+    <ul>
+      <li>Home</li>
+      <li>Blog</li>
+      <li>Settings</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="">
+    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+  </div>
+
+  <!-- Sections -->
+  <div class="section">
+    <h3>Summary</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Reviews</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Weather</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Transportation map & directions</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Homestays</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Hotels</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <div class="section">
+    <h3>Cuisine</h3>
+    <button class="read-btn">Read</button>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
+
