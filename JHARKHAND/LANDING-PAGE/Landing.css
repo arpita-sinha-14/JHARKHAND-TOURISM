@@ -68,7 +68,7 @@ body {
 }
 
 header {
-  background: url('image.png') center/cover no-repeat;
+  background: url('BGI.png') center/cover no-repeat;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -138,7 +138,7 @@ nav ul li a {
 .card {
   width: 90%;
   padding: 18px;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(47, 73, 50, 0.1);
   border-radius: 12px;
   text-align: center;
 }
@@ -227,3 +227,56 @@ footer {
   font-size: 0.85rem;
   opacity: 0.8;
 }
+
+/* Burger Icon */
+.burger {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+/* Sidebar Navigation */
+.side-nav {
+  height: 100%;
+  width: 250px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: -250px;   /* Hidden by default */
+  transition: 0.4s ease;
+  padding-top: 60px;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* When menu is active */
+.side-nav.active {
+  left: 0;
+}
+
+/* Sidebar list styles */
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  padding: 15px 25px;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.book-btn {
+  padding: 10px 20px;
+  background: #ff7b35;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
