@@ -151,6 +151,25 @@ body {
   text-decoration: underline;
 }
 
+.Language-note {
+  margin-top: 16px;
+  font-size: 0.4rem;
+  color: #6b6f85;
+  font-weight: 200;
+  color: antiquewhite;
+  
+}
+
+.Language-link {
+  color: #656ed3;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.Language:hover {
+  text-decoration: underline;
+}
+
 /* Responsive (smaller phones) */
 @media (max-width: 480px) {
   .auth-card {
