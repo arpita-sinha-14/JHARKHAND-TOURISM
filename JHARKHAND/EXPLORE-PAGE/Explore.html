@@ -1,100 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Explore Jharkhand</title>
-  <link rel="stylesheet" href="Explore.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore Page - Desktop</title>
+<link rel="stylesheet" href="Explore.css" />
 </head>
+
 <body>
-  <div class="mobile-container">
 
-    <!-- Top Navbar -->
-    <header class="topbar">
-      <div class="menu" id="menuBtn">☰</div>
-      <div class="search-box">
-        <input type="text" placeholder="Search here..." />
-        <button class="search-btn">🔍</button>
-      </div>
-      <div class="profile">👤</div>
-    </header>
+<!-- TOP NAVBAR -->
+<header class="navbar">
+  <h1 class="brand">Explore</h1>
 
-    <!-- Horizontal Carousel -->
-    <div class="carousel">
-      <article>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="">
-        <h2>The Cross</h2>
-        <div>
-          <p>The Cross is a central symbol of Easter, representing the crucifixion of Jesus Christ and his sacrifice for humanity.</p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
+  <nav class="menu">
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Settings</a>
+    <a href="#">Profile</a>
+  </nav>
+</header>
 
-      <article>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="easter eggs">
-        <h2>Easter Eggs</h2>
-        <div>
-          <p>Easter eggs are a colorful symbol of new life and rebirth, often decorated and hidden for festive hunts.</p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
+<!-- SEARCH BAR -->
+<section class="search-section">
+  <input type="text" placeholder="Search places, attractions, hotels..." />
+  <button>🔍</button>
+</section>
 
-      <article>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="hot cross buns">
-        <h2>Hot Cross Buns</h2>
-        <div>
-          <p>Hot cross buns are sweet, spiced buns marked with a cross on top, traditionally eaten on Good Friday.</p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
+<!-- CAROUSEL -->
+<section class="carousel">
+  <article>
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
+    <h2>Beautiful Beaches</h2>
+    <p>Soothing and breathtaking landscapes.</p>
+    <a href="#">View</a>
+  </article>
 
-      <article>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="easter chick">
-        <h2>Easter Chick</h2>
-        <div>
-          <p>Easter chicks are a cheerful symbol of new life and beginnings, often seen alongside eggs in spring decorations.</p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
+  <article>
+    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" />
+    <h2>Mountain View</h2>
+    <p>Cool weather with scenic views.</p>
+    <a href="#">View</a>
+  </article>
 
-      <article>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="easter bunny">
-        <h2>Easter Bunnies</h2>
-        <div>
-          <p>Easter bunnies are a popular symbol of spring and new life, often seen delivering colorful eggs to children.</p>
-          <a href="#">Read more</a>
-        </div>
-      </article>
-    </div>
+  <article>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+    <h2>Forest Trails</h2>
+    <p>Experience nature's calm beauty.</p>
+    <a href="#">View</a>
+  </article>
+</section>
 
-    <!-- Vertical List Section -->
-    <section class="list-section">
-      <h2>Popular Spots</h2>
-      <div class="list-item"><strong>Patratu Valley</strong> A stunning valley near Ranchi known for its scenic lake, curvy mountain roads, and lush green surroundings
-        . It’s perfect for long drives, photography, and peaceful nature views.</div>
-      <div class="list-item"><strong>Jonha Falls</strong> A beautiful waterfall where the water drops from rocky cliffs into a calm pool. 
-        Surrounded by forest and reachable via a long staircase, it’s ideal for nature lovers and picnics.</div>
-      <div class="list-item"><strong>Hundru Falls</strong> One of the tallest waterfalls in Jharkhand, 
-        created by the Subarnarekha River plunging from a high cliff. Surrounded by massive rocks and greenery,
-         it’s a top trekking and photography destination.</div>
-      <div class="list-item"><strong>Dassam Falls</strong> A powerful and tall waterfall of the Subarnarekha River, 
-        famous for its thunderous sound and clean natural beauty. 
-        A great spot for sightseeing, but swimming is not allowed due to strong currents.</div>
-      <div class="list-item"><strong>Jagannath Temple, Ranchi</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
-    </section>
-  </div>
+<!-- LIST SECTIONS -->
+<section class="list-section">
+  <h2>More Options</h2>
 
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const sidebar = document.getElementById('sidebar');
+  <div class="list-item">Summary</div>
+  <div class="list-item">Reviews</div>
+  <div class="list-item">Weather</div>
+  <div class="list-item">Transport & Map</div>
+  <div class="list-item">Homestays</div>
+  <div class="list-item">Hotels</div>
+  <div class="list-item">Cuisine</div>
+</section>
 
-    menuBtn?.addEventListener('click', () => {
-      sidebar?.classList.add('open');
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === sidebar) sidebar.classList.remove('open');
-    });
-  </script>
 </body>
 </html>

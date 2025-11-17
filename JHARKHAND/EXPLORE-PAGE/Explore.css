@@ -3,114 +3,107 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* PAGE BODY */
-body {
-  background-color: #000;
   font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
-/* MOBILE CONTAINER */
-.mobile-container {
-  width: 360px;
-  height: 640px;
-  background: #111;
+/* BODY BACKGROUND THEME */
+body {
+  background: linear-gradient(180deg, #0a0b10 0%, #0d0f17 100%);
   color: #fff;
-  border-radius: 25px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  padding-bottom: 50px;
 }
 
-.mobile-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* TOP BAR */
-.topbar {
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #181818;
-  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
 }
 
-.menu {
-  font-size: 1.4rem;
-  cursor: pointer;
+.brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #dfe2ff;
 }
 
-.profile {
-  font-size: 1.4rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 6px 10px;
-  border-radius: 50%;
+.menu a {
+  margin-left: 25px;
+  color: #dfe2ff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* SEARCH BAR */
-.search-box {
-  flex: 1;
-  margin: 0 10px;
+.menu a:hover {
+  color: #656ed3;
+}
+
+/* SEARCH SECTION */
+.search-section {
+  margin: 30px auto;
+  width: 70%;
   display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  overflow: hidden;
+  gap: 10px;
 }
 
-.search-box input {
+.search-section input {
   flex: 1;
-  padding: 8px 12px;
-  background: transparent;
-  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   outline: none;
 }
 
-.search-btn {
-  background: transparent;
+.search-section button {
+  padding: 12px 25px;
+  border-radius: 14px;
+  background: #656ed3;
   border: none;
-  color: #fff;
-  font-size: 1.2rem;
   cursor: pointer;
-  padding: 5px 10px;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
-/* HORIZONTAL CAROUSEL */
+.search-section button:hover {
+  background: #555dc4;
+}
+
+/* CAROUSEL */
 .carousel {
   display: flex;
-  overflow-x: auto;       /* allows horizontal scroll */
-  overflow-y: hidden;     /* disables vertical scroll */
-  gap: 1rem;
-  padding: 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  gap: 2rem;
+  padding: 20px 40px;
+  overflow-x: auto;
   scroll-behavior: smooth;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* hides scrollbar for a clean look */
+  height: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #656ed3;
+  border-radius: 10px;
 }
 
 .carousel article {
-  flex: 0 0 auto;
-  width: 220px;
-  background: #1e1e1e;
-  border-radius: 15px;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
   overflow: hidden;
-  text-align: center;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: 0.3s;
 }
 
 .carousel article:hover {
@@ -119,60 +112,54 @@ body {
 
 .carousel article img {
   width: 100%;
-  height: 140px;
+  height: 180px;
   object-fit: cover;
 }
 
 .carousel article h2 {
-  font-size: 1rem;
-  margin-top: 8px;
-  color: #fff;
+  padding: 12px;
+  font-size: 1.2rem;
 }
 
 .carousel article p {
-  font-size: 0.8rem;
-  color: #ccc;
-  padding: 0 10px;
+  padding: 0 12px;
+  color: #ccd0ff;
 }
 
 .carousel article a {
   display: inline-block;
-  margin: 8px 0 12px;
-  padding: 6px 12px;
-  background-color: #0078d7;
+  margin: 12px;
+  padding: 8px 15px;
+  background: #656ed3;
   color: white;
-  border-radius: 5px;
-  font-size: 0.8rem;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .carousel article a:hover {
-  background-color: #005fa3;
+  background: #555dc4;
 }
 
 /* LIST SECTION */
 .list-section {
-  padding: 15px;
+  padding: 20px 40px;
 }
 
 .list-section h2 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #fff;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
 }
 
 .list-item {
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 12px 14px;
-  margin-bottom: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.9rem;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
   transition: 0.2s;
 }
 
 .list-item:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.16);
 }
-

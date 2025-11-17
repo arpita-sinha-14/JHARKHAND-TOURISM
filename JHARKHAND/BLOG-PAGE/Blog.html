@@ -3,18 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog & Reviews</title>
+  <title>Blog & Reviews - Desktop</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Blog.css">
-  
 </head>
+
 <body>
-  <div class="mobile-container">
+
+  <nav class="navbar">
+    <div class="logo">Johar Darpan<span class="hl">.</span>AI</div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <div class="desktop-container">
+    
+    <h1 class="main-heading">Blog & Reviews</h1>
+
     <h2 class="section-title">Blog</h2>
     <div class="blog-post">
       <div class="user-info">
         <img src="https://i.pravatar.cc/100?img=12" alt="User">
         <h3>John Doe</h3>
+      </div>
+      <div class="stars">★★★★★ 
+        <span class="rating-text">5.0</span>
       </div>
       <div class="blog-content">
         <p>Exploring the serene landscapes of Jharkhand was an unforgettable experience. The natural beauty and calm environment make it a perfect getaway!</p>
@@ -27,7 +46,11 @@
         <img src="https://i.pravatar.cc/100?img=5" alt="Reviewer">
         <h3>Jane</h3>
       </div>
-      <div class="stars">★★★★★ <span class="rating-text">5.0</span></div>
+
+      <div class="stars">★★★★★ 
+        <span class="rating-text">5.0</span>
+      </div>
+
       <div class="review-content">
         <p>The trip was absolutely wonderful! Highly recommend visiting Patratu Valley and Netarhat. Peaceful and refreshing!</p>
       </div>
@@ -37,6 +60,7 @@
       <textarea placeholder="Share your thoughts..."></textarea>
       <button class="post-btn">Post</button>
     </div>
+
   </div>
 </body>
 </html>

@@ -3,161 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mobile Blog Page (Phone View)</title>
+<title>Johar AI — Blog & Gallery</title>
 
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    /* OUTER BODY -> ALWAYS CENTER THE MOBILE VIEW */
-    body {
-      width: 100%;
-      height: 100vh;
-      background: #d9d9e2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+body{
+  background:#0d0f17;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
 
-    /* MOBILE FRAME */
-    .mobile-frame {
-      width: 360px;
-      height: 640px;
-      background: #0a0b10;
-      border-radius: 22px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      box-shadow: 0 22px 45px rgba(0,0,0,0.25);
-      position: relative;
-    }
+/* TOP NAVBAR */
+nav{
+  width:100%;
+  padding:16px 48px;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  position:sticky;
+  top:0;
+  z-index:200;
+}
 
-    /* ---------------- HEADER ---------------- */
-    header {
-      position: sticky;
-      top: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 16px;
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      z-index: 200;
-    }
+nav .logo{
+  font-size:22px;
+  font-weight:700;
+  color:#656ed3;
+}
 
-    .menu-btn, .profile-btn {
-      font-size: 26px;
-      cursor: pointer;
-      user-select: none;
-    }
+nav ul{
+  display:flex;
+  gap:32px;
+  list-style:none;
+}
 
-    .page-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
+nav ul li{
+  font-size:15px;
+  cursor:pointer;
+  transition:0.2s;
+}
 
-    /* ---------------- SIDE MENU ---------------- */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -75%;
-      width: 70%;
-      height: 100%;
-      background: white;
-      padding: 22px;
-      box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
-      transition: 0.4s ease-in-out;
-      z-index: 500;
-    }
+nav ul li:hover{
+  color:#656ed3;
+}
 
-    .side-menu.active {
-      left: 0;
-    }
+/* MAIN LAYOUT: SIDEBAR + CONTENT */
+.container{
+  display:flex;
+  width:100%;
+  padding:28px 40px;
+  gap:32px;
+}
 
-    .side-menu h3 {
-      margin-bottom: 15px;
-      font-size: 22px;
-      color: #007bff;
-    }
+/* SIDEBAR */
+.sidebar{
+  width:220px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:20px;
+  height:max-content;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
 
-    .side-menu ul li {
-      list-style: none;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-      cursor: pointer;
-      font-size: 16px;
-    }
+.sidebar h3{
+  color:#656ed3;
+  margin-bottom:18px;
+  font-size:18px;
+}
 
-    .side-menu ul li:hover {
-      color: #007bff;
-    }
+.sidebar ul{
+  list-style:none;
+}
 
-    /* ---------------- GALLERY ---------------- */
-    .gallery {
-      display: flex;
-      gap: 14px;
-      overflow-x: scroll;
-      padding: 16px 16px 6px;
-      scroll-behavior: smooth;
-    }
+.sidebar ul li{
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  cursor:pointer;
+  color:#c9c9d9;
+  transition:0.25s;
+}
 
-    .gallery img {
-      width: 240px;
-      height: 150px;
-      border-radius: 16px;
-      object-fit: cover;
-      flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
+.sidebar ul li:hover{
+  color:#656ed3;
+}
 
-    /* ---------------- SECTIONS ---------------- */
-    .section-card {
-      background: white;
-      margin: 14px 16px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-      transition: 0.3s;
-    }
+/* CONTENT AREA */
+.content{
+  flex:1;
+}
 
-    .section-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 14px rgba(0,0,0,0.1);
-    }
+/* GALLERY */
+.gallery{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  padding-bottom:6px;
+  scrollbar-width:none;
+}
 
-    .section-card h3 {
-      font-size: 15px;
-      font-weight: 500;
-    }
+.gallery img{
+  width:320px;
+  height:200px;
+  border-radius:18px;
+  object-fit:cover;
+  flex-shrink:0;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 6px 18px rgba(0,0,0,0.4);
+}
 
-    .read-btn {
-      background: #007bff;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-    }
+/* SECTION CARDS GRID */
+.section-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:22px;
+}
 
-    .read-btn:hover {
-      background: #0056b3;
-    }
+.section-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  transition:0.25s;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.section-card:hover{
+  transform:translateY(-3px);
+  border-color:#656ed3;
+  box-shadow:0 8px 28px rgba(0,0,0,0.4);
+}
+
+.section-card h3{
+  font-size:18px;
+  color:#e7e7ee;
+}
+
+/* READ BUTTON */
+.read-btn{
+  background:#656ed3;
+  color:white;
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
+  width:max-content;
+}
+
+.read-btn:hover{
+  background:#575ecc;
+  box-shadow:0 0 12px #656ed3;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{
+    flex-direction:column;
+  }
+  .sidebar{
+    width:100%;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="mobile-frame">
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">JoharAI</div>
+  <ul>
+    <li>Home</li>
+    <li>Blog</li>
+    <li>Gallery</li>
+    <li>Settings</li>
+  </ul>
+</nav>
 
-  <!-- SIDE MENU -->
-  <div id="sideMenu" class="side-menu">
+<!-- PAGE LAYOUT -->
+<div class="container">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
     <h3>Menu</h3>
     <ul>
       <li>Home</li>
@@ -166,67 +211,59 @@
       <li>About</li>
       <li>Contact</li>
     </ul>
-  </div>
+  </aside>
 
-  <!-- HEADER -->
-  <header>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <div class="page-title">Gallery</div>
-    <div class="profile-btn">👤</div>
-  </header>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-  <!-- GALLERY -->
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" />
-    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" />
-    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" />
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-  </div>
+    <!-- GALLERY -->
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    </div>
 
-  <!-- SECTIONS -->
-  <div class="section-card">
-    <h3>Summary</h3>
-    <button class="read-btn">Read</button>
-  </div>
+    <!-- SECTION CARDS -->
+    <div class="section-grid">
+      <div class="section-card">
+        <h3>Summary</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Reviews</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Reviews</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Weather</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Weather</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Transportation map & directions</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Transportation Map</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Homestays</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Homestays</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Hotels</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Hotels</h3>
+        <button class="read-btn">Read</button>
+      </div>
 
-  <div class="section-card">
-    <h3>Cuisine</h3>
-    <button class="read-btn">Read</button>
-  </div>
+      <div class="section-card">
+        <h3>Cuisine</h3>
+        <button class="read-btn">Read</button>
+      </div>
+    </div>
 
+  </main>
 </div>
-
-<!-- JS -->
-<script>
-function toggleMenu() {
-  document.getElementById("sideMenu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
