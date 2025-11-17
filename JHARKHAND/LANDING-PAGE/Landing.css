@@ -11,6 +11,18 @@ body {
   overflow-x: hidden;
 }
 
+.menu a {
+  margin-left: 25px;
+  color: #dfe2ff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #656ed3;
+}
+
 /* --------- DESKTOP LAYOUT WRAPPER --------- */
 .container {
   width: 100%;
@@ -209,4 +221,26 @@ footer {
   padding: 20px;
   opacity: 0.8;
   font-size: 0.9rem;
+}
+
+
+/* ----------------- TOP RIGHT NAVIGATION ----------------- */
+.top-right-menu {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.top-right-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #f5f6f6;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.top-right-menu a:hover {
+  color: #5339c9;
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile</title>
+  <link rel="stylesheet" href="Profile.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🌏 JOHAR</div>
+
+    <ul class="top-nav">
+      <li><a href="../LANDING-PAGE/Landing.html">Home</a></li>
+      <li><a href="../EXPLORE-PAGE/Explore.html">Explore</a></li>
+      <li><a href="../PLANNER/planner-page.html">Trip Planner</a></li>
+      <li><a href="../LOGIN-PAGE/Login.html" class="logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROFILE SECTION -->
+  <div class="profile-container">
+
+    <!-- USER CARD -->
+    <div class="profile-card">
+      <img src="https://i.pravatar.cc/200" class="profile-img" alt="User">
+
+      <h2 class="user-name">John Jane</h2>
+      <p class="user-desc">Traveller • Explorer • Jharkhand Tourism Enthusiast</p>
+
+      <button class="edit-btn">Edit Profile</button>
+
+      <div class="stats">
+        <div class="stat-item">
+          <h3>12</h3>
+          <p>Trips</p>
+        </div>
+        <div class="stat-item">
+          <h3>34</h3>
+          <p>Reviews</p>
+        </div>
+        <div class="stat-item">
+          <h3>7</h3>
+          <p>Badges</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS SECTION -->
+    <div class="settings-container" id="settings">
+      <h2>Account Settings</h2>
+
+      <div class="settings-box">
+        <label>Full Name</label>
+        <input type="text" value="John Jane">
+
+        <label>Email</label>
+        <input type="email" value="arpita@example.com">
+
+        <label>Phone</label>
+        <input type="tel" value="+91 9876543210">
+
+        <label>Password</label>
+        <input type="password" value="********">
+
+        <button class="save-btn">Save Changes</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="Profile.js"></script>
+</body>
+</html>
