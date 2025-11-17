@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Dark Theme</title>
+  <link rel="stylesheet" href="List.css">
+</head>
+
+<body>
+  <div class="register-container">
+    <div class="register-card">
+
+      <div class="register-header">
+        <h1 class="register-title">List the service</h1>
+        <p class="register-subtitle">Enter your information for listing</p>
+      </div>
+
+      <form id="registerForm" class="register-form">
+
+        <!-- NAME -->
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Enter your full name">
+          <div class="error-message" id="nameError"></div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <div class="input-container">
+            <input type="email" id="email" class="form-input" placeholder="Enter your email">
+            <div class="input-icon">📧</div>
+          </div>
+          <div class="error-message" id="emailError"></div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-container">
+            <input type="password" id="password" class="form-input" placeholder="Create a password">
+            <button type="button" class="password-toggle" onclick="togglePassword('password', this)">👁</button>
+          </div>
+          <div class="error-message" id="passwordError"></div>
+        </div>
+
+        <!-- CONFIRM PASSWORD -->
+        <div class="form-group">
+          <label class="form-label">Confirm Password</label>
+          <div class="input-container">
+            <input type="password" id="confirmPassword" class="form-input" placeholder="Confirm your password">
+            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword', this)">👁</button>
+          </div>
+          <div class="error-message" id="confirmPasswordError"></div>
+        </div>
+
+        <!-- COUNTRY -->
+        <div class="form-group">
+          <label class="form-label">Area</label>
+          <select id="country" class="form-input">
+            <option value="US">Ranchi</option>
+            <option value="CA">Jamshedpur</option>
+            <option value="UK">Dahnbad</option>
+            <option value="AU">koderma</option>
+          </select>
+        </div>
+
+        <!-- INCOME -->
+        <div class="form-group">
+          <label class="form-label">Service type</label>
+          <select id="income" class="form-input">
+            <option value="low">Home stay</option>
+            <option value="middle">Hotel</option>
+            <option value="high">cuisine related</option>
+          </select>
+        </div>
+
+        <!-- ERROR BANNER -->
+        <div id="mainError" class="error-banner" style="display:none;">
+          ⚠ Listing failed. Check your details.
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit" class="register-button" id="submitBtn">
+          Register
+        </button>
+
+      </form>
+
+      <div class="signin-link">
+        <p>Already have an account? <a href="#" class="signin-text">Sign in</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="List.js"></script>
+</body>
+
+</html>
