@@ -2,14 +2,14 @@ const burger = document.getElementById("burgerMenu");
 const sideMenu = document.getElementById("sideMenu");
 const backdrop = document.getElementById("backdrop");
 
-// OPEN MENU
+// Open sidebar
 burger.addEventListener("click", () => {
   sideMenu.style.right = "0";
   backdrop.style.display = "block";
 });
 
-// CLOSE MENU WHEN CLICK OUTSIDE
+// Close sidebar when clicking outside
 backdrop.addEventListener("click", () => {
-  sideMenu.style.right = "-250px";
+  sideMenu.style.right = "-280px";
   backdrop.style.display = "none";
 });

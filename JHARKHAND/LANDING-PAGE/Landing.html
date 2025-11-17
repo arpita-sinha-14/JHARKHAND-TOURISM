@@ -6,104 +6,110 @@
   <title>Jharkhand Tourism</title>
   <link rel="stylesheet" href="Landing.css" />
 </head>
+
 <body>
 
-  <!-- Mobile Preview Frame -->
-  <div class="mobile-frame">
-    <div class="mobile-wrapper">
+  <!-- BACKDROP FOR SIDEBAR -->
+  <div id="backdrop"></div>
 
-      <!-- NAVBAR -->
-      <header>
-        <nav>
-          <div class="logo">🌏 JOHAR</div>
+  <!-- SIDEBAR MENU -->
+  <nav class="side-nav" id="sideMenu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#included">Included</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="book-btn">Book</button></li>
+    </ul>
+  </nav>
 
-          <!-- Burger Icon -->
-          <div class="burger" onclick="toggleMenu()">☰</div>
+  <!-- MAIN CONTENT -->
+  <div class="container">
 
-<nav class="side-nav" id="sideNav">
-  <ul>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Included</a></li>
-    <li><a href="#">Contacts</a></li>
-    <li><button class="book-btn">Book</button></li>
-  </ul>
-</nav>
+    <!-- HEADER / HERO -->
+    <header>
+      <nav>
+       
 
+        <!-- BURGER ICON -->
+        <div class="burger" id="burgerMenu">☰</div>
 
+        <div class="logo">🌏 JOHAR</div>
+      </nav>
 
+      <div class="hero">
+        <h1>        <br>  </h1>
 
-          <!-- DARK BACKDROP -->
-          <div class="backdrop" id="backdrop"></div>
-        </nav>
-
-        <!-- HERO -->
-        <div class="hero">
-          <h1></h1>
-          <div class="cards">
-            <div class="card">Tourist Places in Jharkhand</div>
-            <div class="card">Explore the Nature</div>
-            <div class="card">Beauty of JHARKHAND</div>
-            <div class="card">Eat the traditional cuisines nearby</div>
-            <div class="card">Enjoy the vibe</div>
-          </div>
+        <div class="cards">
+          <div class="card">Tourist Places in Jharkhand</div>
+          <div class="card">Explore the Nature</div>
+          <div class="card">Beauty of JHARKHAND</div>
+          <div class="card">Eat Traditional Cuisines</div>
+          <div class="card">Feel the Tribal Vibe</div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- ABOUT SECTION -->
-      <section id="about">
-        <h2 class="section-title">ABOUT US</h2>
-        <div class="about-content">
-          <p>Lost in the green heart of India — Jharkhand's untamed charm 🍃</p>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2 class="section-title">ABOUT US</h2>
 
-          <div class="Places">
-            <div class="Places-item"><h3>Eco Tourists Places</h3></div>
-            <div class="Places-item"><h3>Cultural and Religious Places</h3></div>
-            <div class="Places-item"><h3>Parks and Biodiversity</h3></div>
-          </div>
+      <div class="about-content">
+        <p>
+          Lost in the green heart of India — experience Jharkhand’s untamed charm 🍃
+        </p>
+
+        <div class="Places">
+          <div class="Places-item"><h3>Eco Tourist Places</h3></div>
+          <div class="Places-item"><h3>Cultural & Religious Spots</h3></div>
+          <div class="Places-item"><h3>Parks & Biodiversity Zones</h3></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- INCLUDED SECTION -->
-      <section id="included">
-        <h2 class="section-title">OUR SERVICES.....</h2>
-        <div class="included">
-          <div class="included-item">
-            <h3>🗺 Guides</h3>
-            <p>AI guide</p>
-          </div>
-          <div class="included-item">
-            <h3>Hotels and Restaurant</h3>
-            <p>Easy booking experience</p>
-          </div>
-          <div class="included-item">
-            <h3>Travel Means</h3>
-            <p>Book transportation easily</p>
-          </div>
-          <div class="included-item">
-            <h3>PGs and Rentals Nearby</h3>
-            <p>Solo travel made simple</p>
-          </div>
+    <!-- INCLUDED SECTION -->
+    <section id="included">
+      <h2 class="section-title">OUR SERVICES</h2>
+
+      <div class="included">
+        <div class="included-item">
+          <h3>🗺 Guides</h3>
+          <p>AI-powered guidance</p>
         </div>
-      </section>
 
-      <!-- CONTACT FORM -->
-      <section class="contact" id="contact">
-        <h2> Want to join us but still have questions? </h2>
+        <div class="included-item">
+          <h3>Hotels & Restaurants</h3>
+          <p>Seamless Booking Experience</p>
+        </div>
 
-        <form>
-          <input type="text" placeholder="Your name" required>
-          <input type="text" placeholder="Phone number" required>
-          <textarea placeholder="Queries"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </section>
+        <div class="included-item">
+          <h3>Travel Means</h3>
+          <p>Book Transportation Easily</p>
+        </div>
 
-      <!-- FOOTER -->
-      <footer>
-        © 2025 Jharkhand Tourism | All Rights Reserved
-      </footer>
+        <div class="included-item">
+          <h3>PGs & Rentals</h3>
+          <p>Perfect for Solo Travellers</p>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <h2>Want to join us but still have questions?</h2>
+
+      <form>
+        <input type="text" placeholder="Your name" required>
+        <input type="text" placeholder="Phone number" required>
+        <textarea placeholder="Your queries"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © 2025 Jharkhand Tourism | All Rights Reserved
+    </footer>
+
   </div>
 
   <script src="Landing.js"></script>
